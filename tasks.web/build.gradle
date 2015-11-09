@@ -1,0 +1,6 @@
+dependencies {
+		compile  project(':tasks.api')
+		compile  project(':tasks.service')
+}
+
+version = '1.0.0'

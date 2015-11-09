@@ -1,0 +1,1 @@
+include 'tasks.api','tasks.service','tasks.web'

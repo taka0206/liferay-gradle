@@ -1,0 +1,17 @@
+Bundle-Name: Tasks API
+Bundle-SymbolicName: com.liferay.tasks.api
+Bundle-Version: 1.0.0.${tstamp}
+
+Import-Package: \
+    com.liferay.portal.service;version="7.0.0",\
+    org.osgi.framework;version="[1.7,2)",\
+    *
+
+Export-Package: \
+	com.liferay.tasks.exception,\
+	com.liferay.tasks.model,\
+	com.liferay.tasks.service,\
+	com.liferay.tasks.service.persistence,\
+	com.liferay.tasks.util.comparator
+	
+-includeresource:classes

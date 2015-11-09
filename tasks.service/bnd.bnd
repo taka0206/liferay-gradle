@@ -1,0 +1,33 @@
+Bundle-Name: Tasks Service
+Bundle-SymbolicName: com.liferay.tasks.service
+Bundle-Version: 1.0.0.${tstamp}
+
+Import-Package: \
+	com.tasks.*,\
+	com.liferay.portal.service;version="7.0.0",\
+	org.osgi.framework;version="[1.7,2)",\
+	*
+
+Export-Package: \
+	com.liferay.tasks.service.permission,\
+	com.liferay.tasks.util
+
+Private-Package: \
+	com.liferay.tasks.model.impl,\
+	com.liferay.tasks.service.base,\
+	com.liferay.tasks.service.http,\
+	com.liferay.tasks.service.impl,\
+	com.liferay.tasks.service.persistence.impl
+	
+-includeresource: \
+	src/main/resources,\
+	custom-sql/default.xml=src/main/resources/META-INF/custom-sql/default.xml,\
+	@util-java-7.0.0-SNAPSHOT.jar!/com/liferay/util/dao/orm/CustomSQL.class,\
+	@util-java-7.0.0-SNAPSHOT.jar!/com/liferay/util/dao/orm/CustomSQLUtil.class
+
+Liferay-Service: true
+Require-Capability: liferay.extender;filter:="(&(liferay.extender=spring.extender)(version>=1.0)(!(version>=2.0)))"
+Spring-Context: META-INF/spring
+-dsannotations: *
+-sources: true
+Require-SchemaVersion: 2.0.0
