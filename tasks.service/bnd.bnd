@@ -1,33 +1,33 @@
 Bundle-Name: Tasks Service
 Bundle-SymbolicName: com.liferay.tasks.service
-Bundle-Version: 1.0.0.${tstamp}
-
-Import-Package: \
-	com.tasks.*,\
-	com.liferay.portal.service;version="7.0.0",\
-	org.osgi.framework;version="[1.7,2)",\
-	*
+Bundle-Version: 1.0.0
 
 Export-Package: \
 	com.liferay.tasks.service.permission,\
-	com.liferay.tasks.util
+	com.liferay.tasks.asset,\
+	com.liferay.tasks.notifications,\
+	com.liferay.tasks.social
 
 Private-Package: \
 	com.liferay.tasks.model.impl,\
 	com.liferay.tasks.service.base,\
 	com.liferay.tasks.service.http,\
 	com.liferay.tasks.service.impl,\
-	com.liferay.tasks.service.persistence.impl
+	com.liferay.tasks.service.persistence.impl,\
+	com.liferay.tasks.service.util
 	
--includeresource: \
+Include-Resource: \
 	src/main/resources,\
+	resource-actions/default.xml=src/main/resources/META-INF/resource-actions/default.xml,\
 	custom-sql/default.xml=src/main/resources/META-INF/custom-sql/default.xml,\
-	@util-java-7.0.0-SNAPSHOT.jar!/com/liferay/util/dao/orm/CustomSQL.class,\
-	@util-java-7.0.0-SNAPSHOT.jar!/com/liferay/util/dao/orm/CustomSQLUtil.class
+	@lib/util-java.jar!/com/liferay/util/dao/orm/CustomSQL.class,\
+	@lib/util-java.jar!/com/liferay/util/dao/orm/CustomSQLUtil.class
 
 Liferay-Service: true
+
 Require-Capability: liferay.extender;filter:="(&(liferay.extender=spring.extender)(version>=1.0)(!(version>=2.0)))"
+
 Spring-Context: META-INF/spring
--dsannotations: *
--sources: true
 Require-SchemaVersion: 2.0.0
+
+-dsannotations: *

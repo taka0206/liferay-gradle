@@ -1,6 +1,6 @@
 Bundle-Name: Tasks Web
 Bundle-SymbolicName: com.liferay.tasks.web
-Bundle-Version: 1.0.0.${tstamp}
+Bundle-Version: 1.0.0
 
 Service-Component: *
 
@@ -8,7 +8,13 @@ Import-Package: \
 	javax.portlet;version='[2.0,3)',\
 	javax.servlet;version='[2.5,4)',\
 	*
--includeresource:\
-	classes,\
+	
+	
+Include-Resource: \
+	src/main/resources,\
 	META-INF/resources=src/main/resources/META-INF/resources
+
 -dsannotations: *
+Private-Package: \
+	com.liferay.tasks.web.portlet,\
+	com.liferay.tasks.web.portlet.actions

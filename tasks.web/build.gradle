@@ -3,4 +3,6 @@ dependencies {
 		compile  project(':tasks.service')
 }
 
+mkdir ('build/portal-common-css')
+
 version = '1.0.0'
