@@ -12,6 +12,7 @@ Import-Package: \
 	
 Include-Resource: \
 	src/main/resources,\
+	resource-actions=src/main/resources/META-INF/resource-actions,\
 	META-INF/resources=src/main/resources/META-INF/resources
 
 -dsannotations: *

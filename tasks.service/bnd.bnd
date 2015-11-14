@@ -18,7 +18,7 @@ Private-Package: \
 	
 Include-Resource: \
 	src/main/resources,\
-	resource-actions/default.xml=src/main/resources/META-INF/resource-actions/default.xml,\
+	resource-actions=src/main/resources/META-INF/resource-actions,\
 	custom-sql/default.xml=src/main/resources/META-INF/custom-sql/default.xml,\
 	@lib/util-java.jar!/com/liferay/util/dao/orm/CustomSQL.class,\
 	@lib/util-java.jar!/com/liferay/util/dao/orm/CustomSQLUtil.class
